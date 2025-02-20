@@ -7,7 +7,7 @@ public class Actor implements Comparable<Actor> {
 
     public Actor(String name) {
         this.name = name;
-        this.films = new HashSet<>(); // Simplified instantiation
+        this.films = new HashSet<>(); 
     }
 
     public String getName() {
@@ -19,9 +19,9 @@ public class Actor implements Comparable<Actor> {
     }
 
     public void addFilm(Film film) {
-        if (film != null && !films.contains(film)) { // Added null check
+        if (film != null && !films.contains(film)) { 
             films.add(film);
-            film.addActor(this); // Ensure bi-directional reference (if Film has addActor method)
+            film.addActor(this); 
         }
     }
 
