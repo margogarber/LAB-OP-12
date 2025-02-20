@@ -3,12 +3,12 @@ import java.util.*;
 public class Database {
     private HashSet<Film> films;
     private HashSet<Actor> actors;
-    private HashMap<Film, Double> filmRatings; // Added field for film ratings
+    private HashMap<Film, Double> filmRatings; 
 
     public Database() {
         films = new HashSet<Film>();
         actors = new HashSet<Actor>();
-        filmRatings = new HashMap<>(); // Initialize filmRatings
+        filmRatings = new HashMap<>(); 
     }
 
     public HashSet<Film> getFilms() {
@@ -41,7 +41,7 @@ public class Database {
 
     public TreeMap<Film, Double> getFilmsSortedByRating() {
         TreeMap<Film, Double> sortedFilms = new TreeMap<>(
-                (f1, f2) -> Double.compare(filmRatings.get(f2), filmRatings.get(f1)) // Comparator for descending order
+                (f1, f2) -> Double.compare(filmRatings.get(f2), filmRatings.get(f1)) 
         );
         sortedFilms.putAll(filmRatings);
         return sortedFilms;
