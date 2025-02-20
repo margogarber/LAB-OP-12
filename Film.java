@@ -7,7 +7,7 @@ public class Film implements Comparable<Film> {
 
     public Film(String title) {
         this.title = title;
-        this.actors = new HashSet<>(); // TreeSet assumes Actor is Comparable
+        this.actors = new HashSet<>(); 
     }
 
     public String getTitle() {
@@ -21,7 +21,7 @@ public class Film implements Comparable<Film> {
     public void addActor(Actor actor) {
         if (!actors.contains(actor)) {
             actors.add(actor);
-            actor.addFilm(this); // Ensure the Actor class has addFilm method
+            actor.addFilm(this); 
         }
     }
 
